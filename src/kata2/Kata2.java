@@ -24,6 +24,7 @@ public class Kata2 {
             System.out.println(entry.getKey() + " ==> " + entry.getValue());
 
         }
+        System.out.println("");
     }
     
 }
