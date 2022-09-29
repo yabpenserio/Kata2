@@ -8,15 +8,10 @@ public class Kata2 {
 
     public static void main(String[] args) {
         int[] data = {7,2,8,2,10,22,4,7,7,2,1,6,4,4732,13,4,89,2,7,8};
-        Map<Integer,Integer> histogram = new HashMap<Integer,Integer>();
+        HistogramGenerator histogramGenerator = new HistogramGenerator(data);
+        Map<Integer,Integer> histogram = histogramGenerator.getHistogram();
         
        
-        
-        for (int i = 0; i < data.length; i++) {
-            histogram.put(data[i],histogram.containsKey(data[i])? 
-                            histogram.get(data[i])+1:1);
-            
-        }
         for (Map.Entry<Integer,Integer> entry : histogram.entrySet()) {
             System.out.println(entry.getKey() + " ==> " + entry.getValue());
 
